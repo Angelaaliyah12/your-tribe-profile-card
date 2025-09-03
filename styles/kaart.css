@@ -1,0 +1,51 @@
+.container {
+  position: relative; /*hiermee verschuift het niet van zijn plek door andere elementen*/
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* staat voor 100% Van de Hoogte dus het hele scherm van je website*/
+}
+
+.heart-container {
+  display: inline-block;
+  animation: heartbeat 1s infinite ease-in-out;
+  /* 1s duur de animatie gaat oneindig door en de timing functie is dat het rustig begint gaat snel in het midden en eindigt weer langzaam*/
+}
+
+.heart {
+  max-width: 100%;
+  /* hierdoor bewerkt de afbeelding zich met het scherm als het scherm kleiner word */
+  height: auto;
+  /*dit bepaald de hoogte automatisch op basis van de verhoudingen van de inhoud(dus hierbij v.d. img)*/
+}
+
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.left {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+.middle {
+position:absolute;
+top: 35%;
+left: 49%;
+}
+.right{
+  position:absolute;
+  top: 30%;
+  right: 40%;
+}
