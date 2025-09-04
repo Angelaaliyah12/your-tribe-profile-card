@@ -7,6 +7,10 @@
   height: 100vh;
   /* staat voor 100% Van de Hoogte dus het hele scherm van je website*/
 }
+ul{
+  list-style: none;
+  color: darkred;
+}
 
 .heart-container {
   display: inline-block;
@@ -15,7 +19,7 @@
 }
 
 .heart {
-  max-width: 100%;
+  max-width: 1;
   /* hierdoor bewerkt de afbeelding zich met het scherm als het scherm kleiner word */
   height: auto;
   /*dit bepaald de hoogte automatisch op basis van de verhoudingen van de inhoud(dus hierbij v.d. img)*/
@@ -26,18 +30,18 @@
 
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(1); /*100% van de originele grootte (niets verandert*/
   }
 
   50% {
-    transform: scale(1.2);
+    transform: scale(1.2); /*maakt een element 20% groter verticaal horizontaal blijft 100% */
   }
 }
 
 .left {
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 35%;
+  left: 35%;
 }
 .middle {
 position:absolute;
@@ -46,6 +50,6 @@ left: 49%;
 }
 .right{
   position:absolute;
-  top: 30%;
-  right: 40%;
+  top: 35%;
+  right: 35%;
 }
