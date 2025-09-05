@@ -1,29 +1,51 @@
-.container {
-  position: relative; /*hiermee verschuift het niet van zijn plek door andere elementen*/
-  text-align: center;
+
+body {
+  background-color: black;
+  margin: 0;
+  height: 100vh;   /* staat voor 100% Van de Hoogte dus het hele scherm van je website*/
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  /* staat voor 100% Van de Hoogte dus het hele scherm van je website*/
 }
-ul{
-  list-style: none;
-  color: darkred;
+
+.container {
+  position: relative; /*hiermee verschuift het niet van zijn plek door andere elementen*/
+  display: inline-block;
 }
 
 .heart-container {
-  display: inline-block;
+position: relative;   
+width: 500px;
+height: 500px;
+}
+
+.pulse{
+opacity: 0; /* Initially hidden */
+/* animation: fadeIn 1s ease-in-out; */
+position: absolute;
+left:-450px;
+right:0px;
+width: 100vw;
+height: 100%;
+z-index: 1; /*pulse zit achter heart img*/ 
+
+}
+.heart {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /*heart komt dan boven op de pulse img*/ 
   animation: heartbeat 1s infinite ease-in-out;
   /* 1s duur de animatie gaat oneindig door en de timing functie is dat het rustig begint gaat snel in het midden en eindigt weer langzaam*/
 }
 
-.heart {
-  max-width: 1;
-  /* hierdoor bewerkt de afbeelding zich met het scherm als het scherm kleiner word */
-  height: auto;
-  /*dit bepaald de hoogte automatisch op basis van de verhoudingen van de inhoud(dus hierbij v.d. img)*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
 
 
 @keyframes heartbeat {
@@ -36,20 +58,4 @@ ul{
   50% {
     transform: scale(1.2); /*maakt een element 20% groter verticaal horizontaal blijft 100% */
   }
-}
-
-.left {
-  position: absolute;
-  top: 35%;
-  left: 35%;
-}
-.middle {
-position:absolute;
-top: 35%;
-left: 49%;
-}
-.right{
-  position:absolute;
-  top: 35%;
-  right: 35%;
 }
