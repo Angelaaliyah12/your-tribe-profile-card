@@ -1,0 +1,28 @@
+h1 {
+    color: white;
+    margin: 0 0 20px 0;         /* ruimte onder "choose your player" */
+    font-size: 100px;
+    transition: all 0.5s ease-in-out; /* duur en easing */
+}
+
+h2 {
+    color: green;
+    margin: 0;
+    font-size: 50px;
+    transition: all 0.5s ease-in-out; /* ook hier transition toevoegen */
+}
+
+h2:hover {
+    transform: scale(1.2); /* wordt groter bij hover */
+    color: lime;           /* kleurverandering bij hover */
+}
+
+body {
+    flex-direction: column;   
+    background-color: black;
+    height: 100vh;              /* hele schermhoogte */
+    margin: 0;                  /* standaardmarges weghalen */
+    display: flex;              /* flexbox activeren */
+    justify-content: center;    /* verticaal centreren */
+    align-items: center;        /* horizontaal centreren */
+}
