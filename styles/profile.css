@@ -1,44 +1,45 @@
 body{
     background-color: black;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 150px 200px 200px;
+
 }
 
-.box{
-    display: flex;
-    align-items: center;
-}
 .photo{
+ grid-area: 1 / 1 / 4 / 2;
     height: auto;
-    border-color: red;
-    border-radius: 10px ;
+   
 }
 .hearts{
+grid-area: 1 / 2 / 4 / 3; 
     font-size: 70px;
-    width:30px;
-    display: inline-block;
+     width:30px; 
+    display: inline-block; 
     animation: heartbeat 1s infinite ease-in-out;
 }
-.text{
-text-align: right;
-color: rgb(226, 112, 131); 
+.studie{
+  grid-area: 1 / 3 / 2 / 4;
+  color: rgb(226, 112, 131); 
 }
+
 h1{
     font-size: 100px;
-   
-margin-inline: auto;
+   grid-area: 2 / 4 / 3 / 5;
+    color: rgb(226, 112, 131); 
+
 }
 ul{
     list-style: none;
+    color: rgb(226, 112, 131); 
 }
 .prive{
-    display: flex;
-    flex-direction: column;
-}
-.inline{
-     display: flex;
-    align-items: center;
-gap: 450px;
+  grid-area: 3 / 5 / 4 / 6;
+color: rgb(226, 112, 131); 
 
-}
+  }
+
+
 @keyframes heartbeat {
 
   0%,100% {transform: scale(1); /*100% van de originele grootte (niets verandert*/
